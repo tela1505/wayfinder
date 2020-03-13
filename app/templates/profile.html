@@ -1,0 +1,168 @@
+<!-- Use the base template -->
+{% extends "base.html" %}
+<!-- Content for this page -->
+{% block content %}
+    {% from "_formhelpers.html" import render_field %}
+    <body>
+        <div class="container">
+            <h1>My Profile</h1>
+            <br>
+            <div>
+                <h2>Input your weight data:</h2>
+                <br>
+                <form method=post novalidate>
+                    {{ weight_form.csrf_token }}
+                    <dl>
+                        {{ render_field(weight_form.weight, class='form-control') }}
+                        {{ render_field(weight_form.date, class='form-control') }}
+                    </dl>
+                    <br>
+                        <button type="submit" class="btn btn-primary">Submit Data</button>
+                </form>
+                <canvas id="myWeightChart" width="400" height="400"></canvas>
+                <script>
+                Chart.defaults.global.responsive = false;
+                var chartData = {
+                    labels : [{% for item in weightlabels %}
+                                 "{{item}}",
+                                {% endfor %}],
+                    datasets : [{
+                        label: 'Weight',
+                        fill: true,
+                        lineTension: 0.1,
+                        backgroundColor: "rgba(75,192,192,0.4)",
+                        borderColor: "rgba(75,192,192,1)",
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "rgba(75,192,192,1)",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        data : [{% for item in weightvalues %}
+                                    {{item}},
+                                  {% endfor %}],
+                            spanGaps: false
+                        }]
+                    }
+                var ctx = document.getElementById("myWeightChart").getContext("2d");
+                    // create the chart using the chart canvas
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: chartData,
+                });
+                </script>
+                <br>
+                <h2>Input your sleep data:</h2>
+                <br>
+                <form method=post novalidate>
+                    {{ sleep_form.csrf_token }}
+                    <dl>
+                        {{ render_field(sleep_form.sleep, class='form-control') }}
+                        {{ render_field(sleep_form.date, class='form-control') }}
+                    </dl>
+                    <br>
+                        <button type="submit" class="btn btn-primary">Submit Data</button>
+                </form>
+                <canvas id="mySleepChart" width="400" height="400"></canvas>
+                <script>
+                Chart.defaults.global.responsive = false;
+                var chartData = {
+                    labels : [{% for item in sleeplabels %}
+                                 "{{item}}",
+                                {% endfor %}],
+                    datasets : [{
+                        label: 'Sleep',
+                        fill: true,
+                        lineTension: 0.1,
+                        backgroundColor: "rgba(75,192,192,0.4)",
+                        borderColor: "rgba(75,192,192,1)",
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "rgba(75,192,192,1)",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        data : [{% for item in sleepvalues %}
+                                    {{item}},
+                                  {% endfor %}],
+                            spanGaps: false
+                        }]
+                    }
+                var ctx = document.getElementById("mySleepChart").getContext("2d");
+                    // create the chart using the chart canvas
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: chartData,
+                });
+                </script>
+                <br>
+                <h2>Input your grades:</h2>
+                <br>
+                <form method=post novalidate>
+                    {{ grade_form.csrf_token }}
+                    <dl>
+                        {{ render_field(grade_form.grade, class='form-control') }}
+                        {{ render_field(grade_form.gradeSubject, class='form-control') }}
+                        {{ render_field(grade_form.date, class='form-control') }}
+                    </dl>
+                    <br>
+                        <button type="submit" class="btn btn-primary">Submit Data</button>
+                </form>
+                <canvas id="myGradeChart" width="400" height="400"></canvas>
+                <script>
+                Chart.defaults.global.responsive = false;
+                var chartData = {
+                    labels : [{% for item in gradesubject %}
+                                 "{{item}}",
+                                {% endfor %}],
+                    datasets : [{
+                        label: 'Grades',
+                        fill: true,
+                        lineTension: 0.1,
+                        backgroundColor: "rgba(75,192,192,0.4)",
+                        borderColor: "rgba(75,192,192,1)",
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "rgba(75,192,192,1)",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        data : [{% for item in gradevalues %}
+                                    {{item}},
+                                  {% endfor %}],
+                            spanGaps: false
+                        }]
+                    }
+                var ctx = document.getElementById("myGradeChart").getContext("2d");
+                    // create the chart using the chart canvas
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: chartData,
+                });
+                </script>
+                <br>
+            </div>
+        </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,37 @@
+<!-- Use the base template -->
+{% extends "base.html" %}
+{# Add the title for this page #}
+{% block title %}Home{% endblock %}
+<!-- Content for this page -->
+{% block content %}
+    <body>
+        <div class="container active-cyan-3 active-cyan-4 mb-4">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </div>
+            <a href="{{url_for('main.create_post')}}">Create post</a>
+            <h1>Paths</h1>
+            <br>
+
+            {% for post in post_list %}
+            <div class="post-card">
+                <h2>{{post.title}}</h2>
+                <p class="date">{{post.date}}</p>
+                <p> {{post.content}}</p>
+                <a href="{{url_for('main.create_comment', postId=post.postId)}}"> Add comment </a>
+                <a href="{{url_for('main.like', postId = post.postId) }}"> Like </a>
+
+<!--                <img src="{{post.url}}"/>-->
+                <p>Likes: <a id="likes"> {{post.likes}}</a></p>
+                {% for comment in comment_list %}
+                    {% if comment.commentedPostId == post.postId %}
+                    <p> {{comment.content}} </p>
+                    {% endif %}
+                {% endfor %}
+
+
+            </div>
+
+
+            {% endfor %}
+    </body>
+{% endblock %}

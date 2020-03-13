@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{%block content%}
+
+    <h1>My friends</h1>
+    <h1>Friends' posts</h1>
+    <br>
+    {% for post in post_list %}
+    <div class="post-card">
+        <h2>{{post.title}}</h2>
+        <p class="date">{{post.date}}</p>
+        <p> {{post.content}}</p>
+
+    </div>
+    {% endfor %}
+{%endblock%}

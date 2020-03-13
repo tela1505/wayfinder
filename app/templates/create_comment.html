@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+    <h2> Add comment </h2>
+    <form method='post' action="">
+        <p>
+            {{form.content.label}} <br>
+            {{form.content(size=100)}}
+        </p>
+        <p>
+            {{form.submit()}}
+        </p>
+    </form>
+</body>
+
+
+{% endblock %}
