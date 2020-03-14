@@ -5,33 +5,17 @@
 <!-- Content for this page -->
 {% block content %}
     <body>
-        <div class="container active-cyan-3 active-cyan-4 mb-4">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        </div>
-            <a href="{{url_for('main.create_post')}}">Create post</a>
-            <h1>Paths</h1>
-            <br>
-
-            {% for post in post_list %}
-            <div class="post-card">
-                <h2>{{post.title}}</h2>
-                <p class="date">{{post.date}}</p>
-                <p> {{post.content}}</p>
-                <a href="{{url_for('main.create_comment', postId=post.postId)}}"> Add comment </a>
-                <a href="{{url_for('main.like', postId = post.postId) }}"> Like </a>
-
-<!--                <img src="{{post.url}}"/>-->
-                <p>Likes: <a id="likes"> {{post.likes}}</a></p>
-                {% for comment in comment_list %}
-                    {% if comment.commentedPostId == post.postId %}
-                    <p> {{comment.content}} </p>
-                    {% endif %}
-                {% endfor %}
-
-
+        <h1>Paths</h1>
+        <br>
+        <a href="{{ url_for('main.fashion') }}">
+            <div class="post-card card" id="fashion-card">
+                <h2>Fashion Management</h2>
+                <div style="display: flex;">
+                    <img src="../static/img/fashion.jpg" style="width: 500px;">
+                    <article>Fashion Management is the occupation of organising all non-design components of a fashion business (fashion is not just clothing, it can be any decorative product). It involves the need to understand how to market the product, as well as deciding on what product to source from suppliers, and how much inventory to purchase and when.</article>
+                </div>
             </div>
-
-
-            {% endfor %}
+        </a>
+        <br>
     </body>
 {% endblock %}

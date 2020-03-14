@@ -160,16 +160,21 @@ sup {
   top: -.5em;
 }
 
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none !important;
+}
+
 a {
-  color: #007bff;
+  color: inherit;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: inherit;
+  text-decoration: none !important;
 }
 
 a:not([href]):not([tabindex]) {
@@ -3985,6 +3990,7 @@ input[type="button"].btn-block {
   justify-content: space-between;
   padding: 0.5rem 1rem;
   width: max-content;
+  color: #1d2124;
 }
 
 .navbar > .container,
@@ -4381,6 +4387,24 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
   color: #fff;
+}
+
+#fashion-card {
+  padding: 10px !important;
+  border-radius: 10px !important;
+}
+
+.post-card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 10px !important;
+  border-radius: 10px !important;
+}
+
+/* On mouse-over, add a deeper shadow */
+.post-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .card {
