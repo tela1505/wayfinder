@@ -38,4 +38,20 @@
         </ol>
     </div>
     <br>
+    <div class="progress-bar-container">
+        <div class="progress-bar-wrapper"></div>
+        <script>
+        //we can set animation delay as following in ms (default 1000)
+        ProgressBar.singleStepAnimation = 1500;
+        ProgressBar.init(
+          [ 'Step 1: Understanding the role',
+            'Step 2: Gain basic experience',
+            'Step 3: Learn relevant skills',
+            'Step 4: Further Learning'
+          ],
+          'Step 4: Further Learning',
+          'progress-bar-wrapper'
+        );
+        </script>
+    </div>
 {% endblock %}
