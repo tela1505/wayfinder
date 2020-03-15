@@ -1,0 +1,25 @@
+<!-- Use the base template -->
+{% extends "base.html" %}
+<!-- Content for this page -->
+{% block content %}
+    <body>
+        <h1>CV advice:</h1>
+        <br>
+        <h3>What is a CV and how do I make one!?</h3>
+        <br>
+        <p>CV is short for Curriculum Vitae - which is Latin for “course of life” (crazy, we know!). It is a short and sweet display of your skills and interests. It lets you sell yourself to people you may like to work with.</p>
+        <br>
+        <p>There is no golden rule when it comes to creating your CV - it can be as unique as your fingerprints! We do suggest some formating (presentation) guidance, which you can find below. But don’t worry, no one is expecting you to have an amazing CV at this stage, even having one is AMAZING just by itself!</p>
+        <br>
+        <p>Basic features and presentation guidance:</p>
+        <br>
+        <ul>
+            <li>Place your name, email address (<a href="{{ url_for('main.cold') }}">email top tips</a>) and number at the top - you want the receiver to know who you are and how to contact you.</li>
+            <li>Start with a paragraph on why you are interested in the role (<a href="{{ url_for('main.home') }}">see examples</a>).</li>
+            <li>Create a section below this about your education, and any results/awards you may have been given whilst at school.</li>
+            <li>Create a section below this about your skills and interests - here is a good time to review the skills required for your particular path.</li>
+            <li>Create a final section about your hobbies and activities you do outside of school - these can be anything that you really enjoy, for example playing a sport, anything creative, or even being part of an after-school club.</li>
+            <li><a href="{{ url_for('main.home') }}">See CV examples</a>.</li>
+        </ul>
+    </body>
+{% endblock %}

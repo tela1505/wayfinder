@@ -8,6 +8,16 @@ def home():
     return render_template('index.html')
 
 
+@bp_main.route('/emailing')
+def cold():
+    return render_template('resources/cold.html')
+
+
+@bp_main.route('/cv')
+def cv():
+    return render_template('resources/cv.html')
+
+
 @bp_main.route('/fashion')
 def fashion():
     return render_template('fashion_management/fashion_overview.html')
