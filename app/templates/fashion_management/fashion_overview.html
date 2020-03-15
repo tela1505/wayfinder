@@ -1,7 +1,13 @@
 <!-- Use the base template -->
 {% extends "overview.html" %}
-{# Add the title for this page #}
-{% block title %}Fashion{% endblock %}
+{% block pathtitle %}Fashion Management{% endblock %}
+<br>
 {% block path %}
-    <p>Fashion steps</p>
+    <article>Fashion Management is the occupation of organising all non-design components of a fashion business (fashion is not just clothing, it can be any decorative product). It involves the need to understand how to market the product, as well as deciding on what product to source from suppliers, and how much inventory to purchase and when.</article>
+    <br>
+    <p>Fashion steps:</p>
+    <p><a href="{{ url_for('main.fashion1') }}">Step 1: Understanding the role</a></p>
+    <p><a href="{{ url_for('main.fashion2') }}">Step 2: Gain basic experience</a></p>
+    <p><a href="{{ url_for('main.fashion3') }}">Step 3: Learn relevant skills</a></p>
+    <p><a href="{{ url_for('main.fashion4') }}">Step 4: Further Learning</a></p>
 {% endblock %}

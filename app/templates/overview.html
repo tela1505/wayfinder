@@ -1,13 +1,10 @@
 <!-- Use the base template -->
 {% extends "base.html" %}
-{# Add the title for this page #}
-{% block title %}Home{% endblock %}
 <!-- Content for this page -->
 {% block content %}
     <body>
-        <h1>Your chosen path:</h1>
+        <h1>Your chosen path: {% block pathtitle %}{% endblock %}</h1>
             {% block path %}
-                Child pages add page specific content here
             {% endblock %}
     </body>
 {% endblock %}
