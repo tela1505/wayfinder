@@ -141,6 +141,7 @@ li.section.visited.current:before {
 #fashion-card {
   padding: 10px !important;
   border-radius: 10px !important;
+    text-align: center;
 }
 
 .post-card {
@@ -149,6 +150,7 @@ li.section.visited.current:before {
   transition: 0.3s;
   padding: 10px !important;
   border-radius: 10px !important;
+    text-align: center;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -168,6 +170,7 @@ li.section.visited.current:before {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+    text-align: center;
 }
 
 .card > hr {
@@ -351,4 +354,107 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+/* visited link */
+.post-card-main-content a:visited {
+  color: #333;
+}
+
+.post-card-title{
+    text-align: left
+}
+
+a:link{
+    text-decoration: none
+}
+
+article {
+    margin: inherit;
+    font-size: medium;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    text-align: left;
+    height: min-content;
+}
+
+.post-card-img{
+    border-radius: 10px;
+    width: 400px;
+}
+
+.post-card-button{
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.post-card-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/*Main path content content*/
+
+.path-main-description{
+    text-align: left;
+    font-family: sans-serif;
+    flood-color: #333;
+
+}
+
+/* unvisited link */
+.path-main-description a:link {
+  text-decoration: none;
+  color: #333
+}
+
+/*Highlighting title of path*/
+.path-title{
+    color: #4CAF50;
+}
+
+
+/*STYLING PROGRESS STEPS*/
+
+.steps-title{
+    align-content: center;
+    text-align: center;
+
+}
+
+.steps-list{
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    display:block;
+    padding: 2vh;
+    width: 60vh;
+}
+
+.steps-list a:active{
+    color: white;
+}
+
+.steps-list a:link{
+    color: white;
+}
+
+.steps-list a:hover{
+    color: white;
+}
+
+.steps-list a:visited{
+    color: white;
 }
