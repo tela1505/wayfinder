@@ -463,9 +463,31 @@ article {
 
 /*STYLING STEP CARDS*/
 .step-card {
-    margin: 10vh 0vh 10vh 0vh !important;
+    margin: 10vh 0vh 8vh 0vh !important;
 }
 
+.post-card {
+    width: 75%;
+}
+
+.step-card ol ul {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.step-card p li {
+    text-align: justify !important;
+}
+
+.post-card-text {
+    margin: 8vh 5vh;
+}
+
+
+.step-wrapper {
+    align-content: center;
+    text-align: -webkit-center;
+}
 
 /*CONTROL BACK/NEXT BUTTONS STEPS*/
 

@@ -2,28 +2,30 @@
 {% block pathtitle %}Fashion Management{% endblock %}
 <!-- Content for this page -->
 {% block step %}
-    <div class="post-card step-card">
-        <h2>Step 3: Learn relevant skills</h2>
-        <p>To stand out from the crowd, it is important to identify which skills will help you excel and succeed in a fashion management career. The skills we believe are highly desirable for this role are:</p>
-        <br>
-        <ul>
-            <li>Negotiation</li>
-            <li>Time Management</li>
-            <li>Stock Management</li>
-        </ul>
-        <br>
-        <p>Additional knowledge in the following areas may help too:</p>
-        <br>
-        <ul>
-            <li>Basic business knowledge (supply and demand)</li>
-            <li>Design and the creative fashion process</li>
-        </ul>
-        <br>
-        <p>For each of these skills and domain areas, we have compiled a list of relevant resources that we believe will help you out a lot! They are fun, short and sweet videos that do a great job of explaining all the basic concepts required.</p>
+    <div class="step-wrapper">
+        <div class="post-card step-card">
+            <h2>Step 3: Learn relevant skills</h2>
+            <p>To stand out from the crowd, it is important to identify which skills will help you excel and succeed in a fashion management career. The skills we believe are highly desirable for this role are:</p>
+            <br>
+            <ul>
+                <li>Negotiation</li>
+                <li>Time Management</li>
+                <li>Stock Management</li>
+            </ul>
+            <br>
+            <p>Additional knowledge in the following areas may help too:</p>
+            <br>
+            <ul>
+                <li>Basic business knowledge (supply and demand)</li>
+                <li>Design and the creative fashion process</li>
+            </ul>
+            <br>
+            <p>For each of these skills and domain areas, we have compiled a list of relevant resources that we believe will help you out a lot! They are fun, short and sweet videos that do a great job of explaining all the basic concepts required.</p>
+        </div>
     </div>
     <div class="step-control">
-        <button><a href="{{ url_for('main.fashion2') }}">Back</a></button>
-        <button><a href="{{ url_for('main.fashion4') }}">Next</a></button>
+        <a href="{{ url_for('main.fashion2') }}"><button>Back</button></a>
+        <a href="{{ url_for('main.fashion4') }}"><button>Next</button></a>
     </div>
     <br>
     <div class="progress-bar-container">
