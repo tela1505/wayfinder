@@ -11,7 +11,7 @@
 </head>
 <header>
 <nav class="topnav">
-        <a class="logo" href="{{ url_for('main.home') }}"><img class="logo" src="../static/img/wayfinder.jpg" alt="Wayfinder"></a>
+        <a class="logo" href="{{ url_for('main.home') }}"><img class="logo" src="../static/img/wayfinder_s.png" alt="Wayfinder"></a>
     {% if current_user.is_anonymous %}
         <a class="nav-link" href="{{ url_for('auth.signup') }}">Sign up</a>
         <a class="nav-link" href="{{ url_for('auth.login') }}">Log in</a>
