@@ -1,0 +1,38 @@
+<!-- Use the base template -->
+{% extends "overview.html" %}
+{% block pathtitle %}Web Development{% endblock %}
+<br>
+{% block path %}
+    <p class = "path-main-description">Working to develop the design components and the core functionality behind all modern websites and web-based applications. This involves designing and creating basic web pages (e.g. www.wikipedia.com) to complex web apps with lots of data stored (e.g. www.youtube.com) to online platforms with seamless connectivity (e.g. www.whatsapp.com) as well as the Wayfinder webapp you are currently using!</p>
+    <br>
+    <a href="{{ url_for('main.webdev1') }}"><button class="steps-list"><h2>Step 1: Understanding the role</h2></button></a>
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('main.webdev2') }}"><button class="steps-list"><h2>Step 2: Gain basic experience</h2></button></a>
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('main.webdev3') }}"><button class="steps-list"><h2>Step 3: Learn relevant skills</h2></button></a>
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('main.webdev4') }}"><button class="steps-list"><h2>Step 4: Further Learning</h2></button></a>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar-wrapper"></div>
+        <script>
+        //we can set animation delay as following in ms (default 1000)
+        ProgressBar.singleStepAnimation = 1000;
+        ProgressBar.init(
+          [ 'Step 1: Understanding the role',
+            'Step 2: Gain basic experience',
+            'Step 3: Learn relevant skills',
+            'Step 4: Further Learning'
+          ],
+          '',
+          'progress-bar-wrapper'
+        );
+        </script>
+    </div>
+{% endblock %}
