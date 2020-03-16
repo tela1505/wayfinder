@@ -418,6 +418,7 @@ article {
 }
 
 
+
 /*STYLING PROGRESS STEPS*/
 
 .steps-title{
@@ -456,5 +457,52 @@ article {
 }
 
 .steps-list a:visited{
+    color: white;
+}
+
+
+/*STYLING STEP CARDS*/
+.step-card {
+    margin: 10vh 0vh 10vh 0vh !important;
+}
+
+
+/*CONTROL BACK/NEXT BUTTONS STEPS*/
+
+.step-control {
+    text-align: center;
+}
+
+.step-control button {
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: inline-flex;
+    padding: 2vh;
+    width: 30vh;
+    margin: 5vh;
+}
+
+.step-control a:active{
+    color: white;
+}
+
+.step-control a:link{
+    color: white;
+}
+
+.step-control a:hover{
+    color: white;
+}
+
+.step-control a:visited{
     color: white;
 }
