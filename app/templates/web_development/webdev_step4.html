@@ -1,5 +1,5 @@
 {% extends "step4.html" %}
-{% block pathtitle %}Fashion Management{% endblock %}
+{% block pathtitle %}Web Development{% endblock %}
 <!-- Content for this page -->
 {% block step %}
     <div class="step-wrapper">
@@ -46,7 +46,7 @@
     <br>
     <div class="step-control">
         <a href="{{ url_for('main.webdev3') }}"><button>Back</button></a>
-        <a href="{{ url_for('main.webdev') }}"><button>Next</button></a>
+        <a href="{{ url_for('main.webdev_finish') }}"><button id="finish-button">Finish!</button></a>
     </div>
     <div class="progress-bar-container">
         <div class="progress-bar-wrapper"></div>

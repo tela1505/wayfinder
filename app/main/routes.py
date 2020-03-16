@@ -73,3 +73,8 @@ def webdev3():
 @bp_main.route('/webdev/4')
 def webdev4():
     return render_template('web_development/webdev_step4.html')
+
+
+@bp_main.route('/webdev/finish')
+def webdev_finish():
+    return render_template('web_development/webdev_finished.html')
