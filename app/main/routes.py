@@ -50,7 +50,6 @@ def fashion_finish():
 
 
 
-
 @bp_main.route('/webdev')
 def webdev():
     return render_template('web_development/webdev_overview.html')
