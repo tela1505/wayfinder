@@ -18,6 +18,7 @@ def cv():
     return render_template('resources/cv.html')
 
 
+
 @bp_main.route('/fashion')
 def fashion():
     return render_template('fashion_management/fashion_overview.html')
@@ -41,3 +42,29 @@ def fashion3():
 @bp_main.route('/fashion/4')
 def fashion4():
     return render_template('fashion_management/fashion_step4.html')
+
+
+
+@bp_main.route('/webdev')
+def webdev():
+    return render_template('web_development/webdev_overview.html')
+
+
+@bp_main.route('/webdev/1')
+def webdev1():
+    return render_template('web_development/webdev_step1.html')
+
+
+@bp_main.route('/webdev/2')
+def webdev2():
+    return render_template('web_development/webdev_step2.html')
+
+
+@bp_main.route('/webdev/3')
+def webdev3():
+    return render_template('web_development/webdev_step3.html')
+
+
+@bp_main.route('/webdev/4')
+def webdev4():
+    return render_template('web_development/webdev_step4.html')
