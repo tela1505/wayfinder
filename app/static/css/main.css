@@ -361,6 +361,10 @@ p {
   color: #333;
 }
 
+article a:active{
+    color: #333
+}
+
 .post-card-title{
     text-align: left
 }
@@ -527,4 +531,15 @@ article {
 
 .step-control a:visited{
     color: white;
+}
+
+/*Changing colour of finish button*/
+
+#finish-button{
+    background-color: #4CAF50 !important;
+}
+
+/*Dimensions of Badge Image*/
+#badge{
+    height: 30vh;
 }

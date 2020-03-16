@@ -1,0 +1,42 @@
+{% extends "overview.html" %}
+{% block pathtitle %}Fashion Management{% endblock %}
+<!-- Content for this page -->
+{% block path %}
+
+<div class="step-wrapper">
+        <div class="post-card step-card">
+            <h2>Congratulations!</h2>
+            <p>
+            </p>
+            <p></p>
+            <p>You have achieved a certification badge for finishing this pathway, we hope you are as proud as we are :)</p>
+            <p>Don't worry, all the  information you have gone through isn't going anywhere.</p>
+            <p>You can access all previously covered information, and the info related to any other path, by clicking the links below</p>
+            <a><img id="badge" src="../static/img/award-icon.png" alt="Wayfinder Completion Badge"></a>
+        </div>
+    </div>
+
+
+<div class="progress-bar-container">
+        <div class="progress-bar-wrapper"></div>
+        <script>
+        //we can set animation delay as following in ms (default 1000)
+        ProgressBar.singleStepAnimation = 1000;
+        ProgressBar.init(
+          [ 'Step 1: Understanding the role',
+            'Step 2: Gain basic experience',
+            'Step 3: Learn relevant skills',
+            'Step 4: Further Learning'
+          ],
+          'Step 4: Further Learning',
+          'progress-bar-wrapper'
+        );
+        </script>
+    </div>
+
+<div class="step-control">
+        <a href="{{ url_for('main.fashion') }}"><button>Review Content</button></a>
+        <a href="{{ url_for('main.home') }}"><button>Explore Other Paths</button></a>
+    </div>
+
+{% endblock %}

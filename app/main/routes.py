@@ -41,3 +41,9 @@ def fashion3():
 @bp_main.route('/fashion/4')
 def fashion4():
     return render_template('fashion_management/fashion_step4.html')
+
+
+@bp_main.route('/fashion/finish')
+def fashion_finish():
+    return render_template('fashion_management/fashion_finished.html')
+
