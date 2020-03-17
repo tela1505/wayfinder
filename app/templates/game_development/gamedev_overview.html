@@ -1,0 +1,38 @@
+<!-- Use the base template -->
+{% extends "overview.html" %}
+{% block pathtitle %}Game Development{% endblock %}
+<br>
+{% block path %}
+    <p class = "path-main-description">Working to develop video games. This work can involve creating the different design elements of a game, or working to make sure the game performs and functions just as you would want it to.<br><br>Video games come in many shapes and sizes. They can be small-scale games that you play within a webpage, games that you can play on your mobile, or large-scale games you play on a dedicated console. Video games can also be online platforms (containing a multiplayer aspect) or solely offline pieces of media content.</p>
+    <br>
+    <a href="{{ url_for('main.gamedev1') }}"><button class="steps-list"><h2>Step 1: Understanding the role</h2></button></a>
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('main.gamedev2') }}"><button class="steps-list"><h2>Step 2: Gain basic experience</h2></button></a>
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('main.gamedev3') }}"><button class="steps-list"><h2>Step 3: Learn relevant skills</h2></button></a>
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('main.gamedev4') }}"><button class="steps-list"><h2>Step 4: Further Learning</h2></button></a>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar-wrapper"></div>
+        <script>
+        //we can set animation delay as following in ms (default 1000)
+        ProgressBar.singleStepAnimation = 1000;
+        ProgressBar.init(
+          [ 'Step 1: Understanding the role',
+            'Step 2: Gain basic experience',
+            'Step 3: Learn relevant skills',
+            'Step 4: Further Learning'
+          ],
+          '',
+          'progress-bar-wrapper'
+        );
+        </script>
+    </div>
+{% endblock %}

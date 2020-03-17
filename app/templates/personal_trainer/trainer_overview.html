@@ -1,0 +1,38 @@
+<!-- Use the base template -->
+{% extends "overview.html" %}
+{% block pathtitle %}Personal Trainer{% endblock %}
+<br>
+{% block path %}
+    <p class = "path-main-description">Working to help give advice and guidance to individuals, on how to stay physically healthy and for them to achieve their body-related goals (e.g. build muscle, lose weight). Typically, you can provide this advice face-to-face, one-to-one with individuals at a physical location (e.g a gym) or you can do it via online channels (e.g. by having your own website).</p>
+    <br>
+    <a href="{{ url_for('main.trainer1') }}"><button class="steps-list"><h2>Step 1: Understanding the role</h2></button></a>
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('main.trainer2') }}"><button class="steps-list"><h2>Step 2: Gain basic experience</h2></button></a>
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('main.trainer3') }}"><button class="steps-list"><h2>Step 3: Learn relevant skills</h2></button></a>
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('main.trainer4') }}"><button class="steps-list"><h2>Step 4: Further Learning</h2></button></a>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar-wrapper"></div>
+        <script>
+        //we can set animation delay as following in ms (default 1000)
+        ProgressBar.singleStepAnimation = 1000;
+        ProgressBar.init(
+          [ 'Step 1: Understanding the role',
+            'Step 2: Gain basic experience',
+            'Step 3: Learn relevant skills',
+            'Step 4: Further Learning'
+          ],
+          '',
+          'progress-bar-wrapper'
+        );
+        </script>
+    </div>
+{% endblock %}

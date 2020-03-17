@@ -1,0 +1,33 @@
+{% extends "step1.html" %}
+{% block pathtitle %}Personal Trainer{% endblock %}
+<!-- Content for this page -->
+{% block step %}
+    <div class="step-wrapper">
+        <div class="post-card step-card">
+            <h2>Step 1: Understanding the role</h2>
+            <div class="post-card-text">
+                <p>In order to understand if this career is for you, you must first gain a good understanding of what it would actually be like to work in this role! Watch the videos below to gain a better understanding. Videos include interviews with highly successful fashion managers as well as interactive activities demonstrating the day-to-day activities of the role.</p>
+            </div>
+        </div>
+        <div class="step-control">
+            <a href="{{ url_for('main.trainer') }}"><button>Back</button></a>
+            <a href="{{ url_for('main.trainer2') }}"><button>Next</button></a>
+        </div>
+    </div>
+    <br>
+    <div class="progress-bar-container">
+        <div class="progress-bar-wrapper"></div>
+        <script>
+        ProgressBar.singleStepAnimation = 1000;
+        ProgressBar.init(
+          [ 'Step 1: Understanding the role',
+            'Step 2: Gain basic experience',
+            'Step 3: Learn relevant skills',
+            'Step 4: Further Learning'
+          ],
+          'Step 1: Understanding the role',
+          'progress-bar-wrapper'
+        );
+        </script>
+    </div>
+{% endblock %}

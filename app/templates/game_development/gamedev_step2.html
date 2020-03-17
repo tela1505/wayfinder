@@ -1,0 +1,40 @@
+<!-- Use the base template -->
+{% extends "step2.html" %}
+{% block pathtitle %}Game Development{% endblock %}
+<!-- Content for this page -->
+{% block step %}
+    <div class="step-wrapper">
+        <div class="post-card step-card">
+            <h2>Step 2: Gain basic experience</h2>
+            <div class="post-card-text">
+                <p>Now that you understand what this job entails, let’s start learning about what it really takes to excel in the role! To do this, its best to get hands-on. Meaning we need to find a way to gain basic work experience and role-related knowledge. There are three simple techniques that we recommend when it comes to asking for work experience:</p>
+                <ol>
+                    <li>Create a very basic CV - it is never too early to start thinking about presenting yourself in a short and impressive way, and that is exactly what a CV should do - <a href="{{ url_for('main.cv') }}">Learn More</a>.</li>
+                    <li>Cold email looking for experience - a cold email is one where you don’t already know the individual that you are contacting personally, let us show you our recommended steps - <a href="{{ url_for('main.cold') }}">Learn More</a>.</li>
+                    <li>Use your creativity to unlock opportunities - by this, we mean to think outside the box. We want you to use all of your available resources, such as who you know and where you live, to help your search. You will be surprised with just how well suited you are to find opportunities - <a href="{{ url_for('main.gamedev') }}">Learn More</a>.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="step-control">
+        <a href="{{ url_for('main.gamedev1') }}"><button>Back</button></a>
+        <a href="{{ url_for('main.gamedev2') }}"><button>Next</button></a>
+    </div>
+    <br>
+    <div class="progress-bar-container">
+        <div class="progress-bar-wrapper"></div>
+        <script>
+        //we can set animation delay as following in ms (default 1000)
+        ProgressBar.singleStepAnimation = 1000;
+        ProgressBar.init(
+          [ 'Step 1: Understanding the role',
+            'Step 2: Gain basic experience',
+            'Step 3: Learn relevant skills',
+            'Step 4: Further Learning'
+          ],
+          'Step 2: Gain basic experience',
+          'progress-bar-wrapper'
+        );
+        </script>
+    </div>
+{% endblock %}

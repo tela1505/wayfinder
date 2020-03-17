@@ -50,6 +50,37 @@ def fashion_finish():
 
 
 
+@bp_main.route('/gamedev')
+def gamedev():
+    return render_template('game_development/gamedev_overview.html')
+
+
+@bp_main.route('/gamedev/1')
+def gamedev1():
+    return render_template('game_development/gamedev_step1.html')
+
+
+@bp_main.route('/gamedev/2')
+def gamedev2():
+    return render_template('game_development/gamedev_step2.html')
+
+
+@bp_main.route('/gamedev/3')
+def gamedev3():
+    return render_template('game_development/gamedev_step3.html')
+
+
+@bp_main.route('/gamedev/4')
+def gamedev4():
+    return render_template('game_development/gamedev_step4.html')
+
+
+@bp_main.route('/gamedev/finish')
+def gamedev_finish():
+    return render_template('game_development/gamedev_finished.html')
+
+
+
 @bp_main.route('/webdev')
 def webdev():
     return render_template('web_development/webdev_overview.html')
@@ -78,3 +109,96 @@ def webdev4():
 @bp_main.route('/webdev/finish')
 def webdev_finish():
     return render_template('web_development/webdev_finished.html')
+
+
+
+@bp_main.route('/matematician')
+def matematician():
+    return render_template('matematician/matematician_overview.html')
+
+
+@bp_main.route('/matematician/1')
+def matematician1():
+    return render_template('matematician/matematician_step1.html')
+
+
+@bp_main.route('/matematician/2')
+def matematician2():
+    return render_template('matematician/matematician_step2.html')
+
+
+@bp_main.route('/matematician/3')
+def matematician3():
+    return render_template('matematician/matematician_step3.html')
+
+
+@bp_main.route('/matematician/4')
+def matematician4():
+    return render_template('matematician/matematician_step4.html')
+
+
+@bp_main.route('/matematician/finish')
+def matematician_finish():
+    return render_template('matematician/matematician_finished.html')
+
+
+
+@bp_main.route('/trainer')
+def trainer():
+    return render_template('personal_trainer/trainer_overview.html')
+
+
+@bp_main.route('/trainer/1')
+def trainer1():
+    return render_template('personal_trainer/trainer_step1.html')
+
+
+@bp_main.route('/trainer/2')
+def trainer2():
+    return render_template('personal_trainer/trainer_step2.html')
+
+
+@bp_main.route('/trainer/3')
+def trainer3():
+    return render_template('personal_trainer/trainer_step3.html')
+
+
+@bp_main.route('/trainer/4')
+def trainer4():
+    return render_template('personal_trainer/trainer_step4.html')
+
+
+@bp_main.route('/trainer/finish')
+def trainer_finish():
+    return render_template('personal_trainer/trainer_finished.html')
+
+
+
+@bp_main.route('/medicine')
+def medicine():
+    return render_template('medicine/medicine_overview.html')
+
+
+@bp_main.route('/medicine/1')
+def medicine1():
+    return render_template('medicine/medicine_step1.html')
+
+
+@bp_main.route('/medicine/2')
+def medicine2():
+    return render_template('medicine/medicine_step2.html')
+
+
+@bp_main.route('/medicine/3')
+def medicine3():
+    return render_template('medicine/medicine_step3.html')
+
+
+@bp_main.route('/medicine/4')
+def medicine4():
+    return render_template('medicine/medicine_step4.html')
+
+
+@bp_main.route('/medicine/finish')
+def medicine_finish():
+    return render_template('medicine/medicine_finished.html')

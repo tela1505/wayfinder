@@ -1,0 +1,38 @@
+<!-- Use the base template -->
+{% extends "overview.html" %}
+{% block pathtitle %}Doctor (Medicine){% endblock %}
+<br>
+{% block path %}
+    <p class = "path-main-description">Working to help save the lives of others. This work is done in many ways. For example, by identifying any relevant condition that a potential patient may have and following up with recommendations of what actions should be taken to help a patient, as well as actually undertaking operating procedures on a patient if necessary. There are a wide variety of roles that Doctors can specialise in, dependent on the body-related area and the type of illness you want to help treat.</p>
+    <br>
+    <a href="{{ url_for('main.medicine1') }}"><button class="steps-list"><h2>Step 1: Understanding the role</h2></button></a>
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('main.medicine2') }}"><button class="steps-list"><h2>Step 2: Gain basic experience</h2></button></a>
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('main.medicine3') }}"><button class="steps-list"><h2>Step 3: Learn relevant skills</h2></button></a>
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('main.medicine4') }}"><button class="steps-list"><h2>Step 4: Further Learning</h2></button></a>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar-wrapper"></div>
+        <script>
+        //we can set animation delay as following in ms (default 1000)
+        ProgressBar.singleStepAnimation = 1000;
+        ProgressBar.init(
+          [ 'Step 1: Understanding the role',
+            'Step 2: Gain basic experience',
+            'Step 3: Learn relevant skills',
+            'Step 4: Further Learning'
+          ],
+          '',
+          'progress-bar-wrapper'
+        );
+        </script>
+    </div>
+{% endblock %}
