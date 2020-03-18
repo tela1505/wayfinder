@@ -13,11 +13,11 @@
 <nav class="topnav">
         <a class="logo" href="{{ url_for('main.home') }}"><img class="logo" src="../static/img/wayfinder_s.png" alt="Wayfinder"></a>
     {% if current_user.is_anonymous %}
-        <a class="nav-link" href="{{ url_for('auth.signup') }}">Sign up</a>
-        <a class="nav-link" href="{{ url_for('auth.login') }}">Log in</a>
+        <a id="nav-link" href="{{ url_for('auth.signup') }}">Sign up</a>
+        <a id="nav-link" href="{{ url_for('auth.login') }}">Log in</a>
     {% else %}
-        <a class="nav-link" href="{{ url_for('prof.profile') }}">Profile</a>
-        <a class="nav-link" href="{{ url_for('auth.logout') }}">Log out</a>
+        <a id="nav-link" href="{{ url_for('prof.profile') }}">Profile</a>
+        <a id="nav-link" href="{{ url_for('auth.logout') }}">Log out</a>
         {% endif %}
     </ul>
 </nav>
