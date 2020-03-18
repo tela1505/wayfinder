@@ -112,34 +112,34 @@ def webdev_finish():
 
 
 
-@bp_main.route('/matematician')
-def matematician():
-    return render_template('matematician/matematician_overview.html')
+@bp_main.route('/mathematician')
+def mathematician():
+    return render_template('mathematician/mathematician_overview.html')
 
 
-@bp_main.route('/matematician/1')
-def matematician1():
-    return render_template('matematician/matematician_step1.html')
+@bp_main.route('/mathematician/1')
+def mathematician1():
+    return render_template('mathematician/mathematician_step1.html')
 
 
-@bp_main.route('/matematician/2')
-def matematician2():
-    return render_template('matematician/matematician_step2.html')
+@bp_main.route('/mathematician/2')
+def mathematician2():
+    return render_template('mathematician/mathematician_step2.html')
 
 
-@bp_main.route('/matematician/3')
-def matematician3():
-    return render_template('matematician/matematician_step3.html')
+@bp_main.route('/mathematician/3')
+def mathematician3():
+    return render_template('mathematician/mathematician_step3.html')
 
 
-@bp_main.route('/matematician/4')
-def matematician4():
-    return render_template('matematician/matematician_step4.html')
+@bp_main.route('/mathematician/4')
+def mathematician4():
+    return render_template('mathematician/mathematician_step4.html')
 
 
-@bp_main.route('/matematician/finish')
-def matematician_finish():
-    return render_template('matematician/matematician_finished.html')
+@bp_main.route('/mathematician/finish')
+def mathematician_finish():
+    return render_template('mathematician/mathematician_finished.html')
 
 
 
