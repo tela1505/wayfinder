@@ -13,11 +13,13 @@ CREATE TABLE IF NOT EXISTS "posts" (
 DROP TABLE IF EXISTS "users";
 CREATE TABLE IF NOT EXISTS "users" (
 	"username"	TEXT NOT NULL,
+
 	"password"	TEXT NOT NULL,
 	"userId"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	"name"	TEXT NOT NULL,
 	"age"	INTEGER NOT NULL,
-	"university"	TEXT NOT NULL,
+	"school"	TEXT NOT NULL,
+	"studies"	TEXT NOT NULL,
 	"email"	TEXT NOT NULL
 );
 DROP TABLE IF EXISTS "grade_measurements";

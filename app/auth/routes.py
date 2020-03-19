@@ -46,7 +46,7 @@ def unauthorized():
 def signup():
     form = SignupForm(request.form)
     if request.method == 'POST' and form.validate():
-        user = User(username=form.username.data, email=form.email.data, name=form.name.data, age=form.age.data, university=form.university.data)
+        user = User(username=form.username.data, email=form.email.data, name=form.name.data, age=form.age.data, school=form.school.data, studies=form.studies.data)
         user.set_password(form.password.data)
         try:
             db.session.add(user)
